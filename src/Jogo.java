@@ -4,7 +4,7 @@ import java.util.Arrays;
 public abstract class Jogo {
     public abstract Personagem geraPersonagem(String nome);
 
-    public void Jogar(String nomeDoPersonagem) {
+    public void jogar(String nomeDoPersonagem) {
         Personagem personagem = geraPersonagem(nomeDoPersonagem);
         Inimigo inimigo1 = new Inimigo("Inimigo 1");
         Inimigo inimigo2 = new Inimigo("Inimigo 2");

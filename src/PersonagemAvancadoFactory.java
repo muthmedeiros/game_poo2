@@ -1,4 +1,4 @@
-public class SimplePersonagemFactory extends JogoNormal {
+public class PersonagemAvancadoFactory extends Jogo {
     @Override
     public Personagem geraPersonagem(String nome) {
         Personagem personagem = new Personagem(nome);
@@ -19,7 +19,7 @@ public class SimplePersonagemFactory extends JogoNormal {
             personagem.setCorrida(new CorridaLenta());
         } else if (random <= 0.8) {
             personagem.setAtaque(new AtaqueDobro(new AtaqueForte()));
-            personagem.setPulo(new PuloBaixo());
+            personagem.setPulo(new PuloMedio());
             personagem.setCorrida(new CorridaLenta());
         } else {
             personagem.setAtaque(ataqueAleatorio);

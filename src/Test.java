@@ -1,20 +1,28 @@
-import javax.swing.*;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Objects;
+import java.util.Scanner;
 
 public class Test {
-    public static void main(String[] args) {
-        Personagem personagem = new Personagem("Jogador");
-        Inimigo inimigo1 = new Inimigo("Inimigo 1");
-        Inimigo inimigo2 = new Inimigo("Inimigo 2");
-        Inimigo inimigo3 = new Inimigo("Inimigo 3");
+    public static void main(String[] args) throws Exception {
+        Jogo jogo = null;
 
-        personagem.adicionarObservador(inimigo1);
-        personagem.adicionarObservador(inimigo2);
-        personagem.adicionarObservador(inimigo3);
+        Scanner scanner = new Scanner(System.in);
 
-        ArrayList<Inimigo> inimigos = new ArrayList<>(Arrays.asList(inimigo1, inimigo2, inimigo3));
+        System.out.println("Selecione o tipo de jogo (1 - Normal / 2 - Avançado)");
+        String gameType = scanner.nextLine();
 
-        GameFrame frame = new GameFrame(personagem, inimigos);
+        if (Objects.equals(gameType, "1")) {
+            jogo = new PersonagemSimplesFactory();
+        } else if (Objects.equals(gameType, "2")) {
+            jogo = new PersonagemAvancadoFactory();
+        }
+        else {
+            throw new Exception("Opção inválida!");
+        }
+
+        System.out.println("Digite o nome do personagem: ");
+
+        String nome = scanner.nextLine();
+
+        jogo.jogar(nome);
     }
 }
