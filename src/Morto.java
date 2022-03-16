@@ -1,0 +1,9 @@
+public class Morto extends Estado {
+    public Morto(Pessoa pessoa) {
+        super(pessoa);
+    }
+
+    @Override
+    protected void verificarAlteracaoEstado() {
+    }
+}
