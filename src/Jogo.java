@@ -2,10 +2,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public abstract class Jogo {
-    public abstract Personagem geraPersonagem(String nome);
+    public abstract Personagem geraPersonagem(String nome, int tipoDoPersonagem);
 
-    public void jogar(String nomeDoPersonagem) {
-        Personagem personagem = geraPersonagem(nomeDoPersonagem);
+    public void jogar(String nomeDoPersonagem, int tipoDoPersonagem) {
+        Personagem personagem = geraPersonagem(nomeDoPersonagem, tipoDoPersonagem);
         Inimigo inimigo1 = new Inimigo("Inimigo 1");
         Inimigo inimigo2 = new Inimigo("Inimigo 2");
         Inimigo inimigo3 = new Inimigo("Inimigo 3");

@@ -7,22 +7,27 @@ public class Test {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Selecione o tipo de jogo (1 - Normal / 2 - Avançado)");
+        System.out.println("Digite o nome do personagem: ");
+        String nome = scanner.nextLine();
+
+        System.out.println("Selecione o tipo de jogo (1 - Normal / 2 - Avançado / 3 - Medieval / 4 - Futurista)");
         String gameType = scanner.nextLine();
 
         if (Objects.equals(gameType, "1")) {
-            jogo = new PersonagemSimplesFactory();
+            jogo = JogoSimples.getInstancia();
         } else if (Objects.equals(gameType, "2")) {
-            jogo = new PersonagemAvancadoFactory();
-        }
-        else {
+            jogo = JogoAvancado.getInstancia();
+        } else if (Objects.equals(gameType, "3")) {
+            jogo = JogoMedieval.getInstancia();
+        } else if (Objects.equals(gameType, "4")) {
+            jogo = JogoFuturista.getInstancia();
+        } else {
             throw new Exception("Opção inválida!");
         }
 
-        System.out.println("Digite o nome do personagem: ");
+        System.out.println("Selecione o tipo de personagem: ");
+        int tipoDoPersonagem = Integer.parseInt(scanner.nextLine());
 
-        String nome = scanner.nextLine();
-
-        jogo.jogar(nome);
+        jogo.jogar(nome, tipoDoPersonagem);
     }
 }

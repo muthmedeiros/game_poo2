@@ -3,13 +3,13 @@ import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 public class Personagem extends Pessoa implements Subject {
-    private int escudo;
+    private Arma arma;
+    private Defesa defesa;
     private final ArrayList<Observer> observadores = new ArrayList<>();
 
     public Personagem(String nome) {
         super(nome, 100);
         this.setEstado(new Forte(this));
-        this.setEscudo(0);
     }
 
     public void acoes(KeyEvent e) {
@@ -42,9 +42,7 @@ public class Personagem extends Pessoa implements Subject {
 
     public void recebeVida(int vida) {
         if (this.getVida() > 0) {
-            if (this.getVida() + vida > 100) {
-                this.setEscudo((this.getVida() + vida) - 100);
-            } else {
+            if (this.getVida() + vida <= 100) {
                 this.setVida(this.getVida() + vida);
             }
             this.getEstado().ganhaVida(vida);
@@ -77,11 +75,19 @@ public class Personagem extends Pessoa implements Subject {
         return this.observadores;
     }
 
-    public int getEscudo() {
-        return this.escudo;
+    public Defesa getDefesa() {
+        return defesa;
     }
 
-    public void setEscudo(int escudo) {
-        this.escudo = escudo;
+    public void setDefesa(Defesa defesa) {
+        this.defesa = defesa;
+    }
+
+    public Arma getArma() {
+        return arma;
+    }
+
+    public void setArma(Arma arma) {
+        this.arma = arma;
     }
 }
