@@ -1,6 +1,18 @@
-public class PersonagemAvancadoFactory extends Jogo {
+public class JogoAvancado extends Jogo {
+    private static JogoAvancado instancia = null;
+
+    private JogoAvancado() {
+    }
+
+    public static synchronized JogoAvancado getInstancia() {
+        if (instancia == null) {
+            instancia = new JogoAvancado();
+        }
+        return instancia;
+    }
+
     @Override
-    public Personagem geraPersonagem(String nome) {
+    public Personagem geraPersonagem(String nome, int tipoDoPersonagem) {
         Personagem personagem = new Personagem(nome);
         double random = Math.random();
         Ataque ataqueAleatorio = AtaqueFactory.geraAtaqueAleatorio();
