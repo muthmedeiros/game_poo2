@@ -4,4 +4,10 @@ public class Android extends Personagem {
         this.setArma(new Kamehameha());
         this.setDefesa(new EscudoHextec());
     }
+
+    public static class ArcoFlecha extends Arma {
+        public ArcoFlecha() {
+            System.out.println("Arma: Arco e Flecha.");
+        }
+    }
 }

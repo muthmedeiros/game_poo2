@@ -1,4 +1,5 @@
 public abstract class Estado {
+
     private final int morte;
     private final int perigo;
     private final int normal;
