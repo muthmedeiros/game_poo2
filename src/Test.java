@@ -10,7 +10,7 @@ public class Test {
         System.out.println("Digite o nome do personagem: ");
         String nome = scanner.nextLine();
 
-        System.out.println("Selecione o tipo de jogo (1 - Normal / 2 - Avançado / 3 - Medieval / 4 - Futurista)");
+        System.out.println("Selecione o tipo de jogo (1 - Estado.Normal / 2 - Avançado / 3 - Medieval / 4 - Futurista)");
         String gameType = scanner.nextLine();
 
         if (Objects.equals(gameType, "1")) {

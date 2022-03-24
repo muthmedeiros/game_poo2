@@ -1,8 +1,13 @@
+import com.personagens.Arqueiro;
+import com.personagens.Espadachim;
+import com.personagens.Lanceiro;
+import com.personagens.Personagem;
+
 public class JogoMedieval extends Jogo {
     private static JogoMedieval instancia = null;
 
     private JogoMedieval() {
-        System.out.println("Personagens disponíveis:\n1 - Arqueiro\n2 - Lanceiro\n3 - Espadachim");
+        System.out.println("Personagens disponíveis:\n1 - Personagens.Arqueiro\n2 - Personagens.Lanceiro\n3 - Personagens.Espadachim");
     }
 
     public static synchronized JogoMedieval getInstancia() {

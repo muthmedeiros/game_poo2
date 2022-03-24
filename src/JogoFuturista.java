@@ -1,8 +1,13 @@
+import com.personagens.Android;
+import com.personagens.HomemDeFerro;
+import com.personagens.Personagem;
+import com.personagens.Robo;
+
 public class JogoFuturista extends Jogo {
     private static JogoFuturista instancia = null;
 
     private JogoFuturista() {
-        System.out.println("Personagens disponíveis:\n1 - Robô\n2 - Android\n3 - Homem de Ferro");
+        System.out.println("Personagens disponíveis:\n1 - Robô\n2 - Personagens.Android\n3 - Homem de Ferro");
     }
 
     public static synchronized JogoFuturista getInstancia() {

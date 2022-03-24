@@ -1,3 +1,7 @@
+import com.personagens.Inimigo;
+import com.personagens.Personagem;
+import com.personagens.Pessoa;
+
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -91,7 +95,7 @@ public class GameFrame extends JFrame implements KeyListener{
     }
 
     public String labelText(Pessoa pessoa) {
-        return pessoa.getNome() + ": " + pessoa.getVida() + " (Estado: " + pessoa.getEstado().getClass().getName() + ")";
+        return pessoa.getNome() + ": " + pessoa.getVida() + " (Estado.Estado: " + pessoa.getEstado().getClass().getName() + ")";
     }
     
     public void criaScoreVidas() {

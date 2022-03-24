@@ -1,3 +1,15 @@
+import com.ataque.*;
+import com.corrida.CorridaFactory;
+import com.corrida.CorridaLenta;
+import com.corrida.CorridaMedia;
+import com.corrida.CorridaRapida;
+import com.estado.MeiaVida;
+import com.personagens.Personagem;
+import com.pulo.PuloAlto;
+import com.pulo.PuloBaixo;
+import com.pulo.PuloFactory;
+import com.pulo.PuloMedio;
+
 public class JogoAvancado extends Jogo {
     private static JogoAvancado instancia = null;
 

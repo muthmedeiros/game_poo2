@@ -1,3 +1,11 @@
+import com.ataque.AcertoFatal;
+import com.ataque.AtaqueDobro;
+import com.estado.MeiaVida;
+import com.personagens.Personagem;
+import com.personagens.PersonagemA;
+import com.personagens.PersonagemB;
+import com.personagens.PersonagemC;
+
 public class JogoSimples extends Jogo {
     private static JogoSimples instancia = null;
 
